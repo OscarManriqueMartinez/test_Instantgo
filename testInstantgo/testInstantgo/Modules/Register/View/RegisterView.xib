@@ -27,16 +27,16 @@
                     <rect key="frame" x="16" y="80" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-eO-YCF">
                     <rect key="frame" x="16" y="206" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5E-fV-p8R">
-                    <rect key="frame" x="164" y="341" width="46" height="30"/>
+                    <rect key="frame" x="164" y="278" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="tapRegister:" destination="-1" eventType="touchUpInside" id="t07-Jh-Upe"/>
@@ -46,13 +46,13 @@
                     <rect key="frame" x="16" y="143" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="CcY-M9-lI3" firstAttribute="trailing" secondItem="EZ1-R6-tNW" secondAttribute="trailing" id="0PN-MR-6f4"/>
-                <constraint firstItem="N5E-fV-p8R" firstAttribute="top" secondItem="NJW-eO-YCF" secondAttribute="bottom" constant="105" id="4H0-yq-PGS"/>
+                <constraint firstItem="N5E-fV-p8R" firstAttribute="top" secondItem="NJW-eO-YCF" secondAttribute="bottom" constant="42" id="4H0-yq-PGS"/>
                 <constraint firstItem="NJW-eO-YCF" firstAttribute="top" secondItem="CcY-M9-lI3" secondAttribute="bottom" constant="33" id="BYJ-ci-cZD"/>
                 <constraint firstItem="EZ1-R6-tNW" firstAttribute="top" secondItem="9JP-JY-ND5" secondAttribute="top" constant="80" id="GdK-tM-riD"/>
                 <constraint firstAttribute="trailing" secondItem="EZ1-R6-tNW" secondAttribute="trailing" constant="16" id="IUe-73-JRo"/>

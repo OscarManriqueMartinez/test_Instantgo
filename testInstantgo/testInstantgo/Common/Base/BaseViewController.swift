@@ -33,6 +33,8 @@ class BaseViewController: UIViewController {
         activityIndicator.center = self.view.center
         activityIndicator.color = UIColor.blue
         self.view.addSubview(activityIndicator)
+        
+        hideKeyboardWhenTappedAround()
     }
     
     

@@ -32,6 +32,7 @@
 		3F817F6F1EEC478C004A9865 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F6D1EEC478C004A9865 /* RegisterViewController.swift */; };
 		3F817F711EEC4D22004A9865 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F701EEC4D22004A9865 /* BasePresenter.swift */; };
 		3F817F731EEC4D5E004A9865 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F721EEC4D5E004A9865 /* BaseViewController.swift */; };
+		3F817F751EEC6BDA004A9865 /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */; };
 		3F93D87F1EEAF12F007AA6D9 /* testInstantgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */; };
 		3F93D88A1EEAF12F007AA6D9 /* testInstantgoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D8891EEAF12F007AA6D9 /* testInstantgoUITests.swift */; };
 		3F93D8AA1EEAFA0C007AA6D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F93D89F1EEAFA0C007AA6D9 /* GoogleService-Info.plist */; };
@@ -83,6 +84,7 @@
 		3F817F6D1EEC478C004A9865 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F817F701EEC4D22004A9865 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		3F817F721EEC4D5E004A9865 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		3F93D8661EEAF12F007AA6D9 /* testInstantgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testInstantgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87A1EEAF12F007AA6D9 /* testInstantgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testInstantgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testInstantgoTests.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		3F93D89D1EEAFA0C007AA6D9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */,
 				3F817F4F1EEB0CAC004A9865 /* String+Util.swift */,
 			);
 			path = Tools;
@@ -523,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F817F751EEC6BDA004A9865 /* UIViewController+Util.swift in Sources */,
 				3F817F401EEB05A9004A9865 /* LoginViewController.swift in Sources */,
 				3F817F3E1EEB05A9004A9865 /* LoginPresenter.swift in Sources */,
 				3F817F411EEB05A9004A9865 /* LoginWireframe.swift in Sources */,

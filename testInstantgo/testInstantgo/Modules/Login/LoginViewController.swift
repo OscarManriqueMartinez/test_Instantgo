@@ -21,7 +21,7 @@ protocol LoginViewControllerProtocol: class, BaseViewControllerProtocol {
 }
 
 
-class LoginViewController: BaseViewController, LoginViewControllerProtocol {
+class LoginViewController: BaseViewController, LoginViewControllerProtocol, UITextFieldDelegate {
   
     // MARK: - Properties
     
@@ -39,7 +39,9 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
         super.viewDidLoad()
         
         txfLoginUser.placeholder = "email.placeholder".localized
+        txfLoginUser.delegate = self
         txfLoginPass.placeholder = "password.placeholder".localized
+        txfLoginPass.delegate = self
         btnLogin.setTitle("login.button".localized, for: .normal)
         btnRegister.setTitle("register.button".localized, for: .normal)
     }
@@ -71,4 +73,17 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
         presenter?.goToRegister()
     }
     
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == txfLoginUser {
+            txfLoginPass.becomeFirstResponder()
+            return false
+        }
+    
+        self.view.endEditing(true)
+        return false
+    }
 }

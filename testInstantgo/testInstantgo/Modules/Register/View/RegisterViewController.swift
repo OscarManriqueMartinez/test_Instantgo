@@ -24,7 +24,7 @@ protocol RegisterViewControllerProtocol: class, BaseViewControllerProtocol {
 }
 
 
-class RegisterViewController: BaseViewController, RegisterViewControllerProtocol {
+class RegisterViewController: BaseViewController, RegisterViewControllerProtocol, UITextFieldDelegate {
   
     // MARK: - Properties
     
@@ -42,8 +42,11 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
         super.viewDidLoad()
         
         txfRegisterUser.placeholder = "email.placeholder".localized
+        txfRegisterUser.delegate = self
         txfRegisterPass.placeholder = "password.placeholder".localized
+        txfRegisterPass.delegate = self
         txfRegisterRepeatPass.placeholder = "password.repeat.placeholder".localized
+        txfRegisterRepeatPass.delegate = self
         btnRegister.setTitle("register.button".localized, for: .normal)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
@@ -79,5 +82,23 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
     func close() {
         
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == txfRegisterUser {
+            txfRegisterPass.becomeFirstResponder()
+            return false
+            
+        } else if textField == txfRegisterPass {
+            txfRegisterRepeatPass.becomeFirstResponder()
+            return false
+        }
+        
+        self.view.endEditing(true)
+        return false
     }
 }
