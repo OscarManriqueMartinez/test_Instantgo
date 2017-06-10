@@ -21,6 +21,8 @@
 		3F817F521EEC1C02004A9865 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F511EEC1C02004A9865 /* Enviroment.swift */; };
 		3F817F541EEC1C0C004A9865 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F531EEC1C0C004A9865 /* Constants.swift */; };
 		3F817F561EEC1CA7004A9865 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F817F551EEC1CA7004A9865 /* Config.plist */; };
+		3F817F591EEC3952004A9865 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F581EEC3952004A9865 /* AlertFactory.swift */; };
+		3F817F5B1EEC3AE9004A9865 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F5A1EEC3AE9004A9865 /* BaseError.swift */; };
 		3F93D87F1EEAF12F007AA6D9 /* testInstantgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */; };
 		3F93D88A1EEAF12F007AA6D9 /* testInstantgoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D8891EEAF12F007AA6D9 /* testInstantgoUITests.swift */; };
 		3F93D8AA1EEAFA0C007AA6D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F93D89F1EEAFA0C007AA6D9 /* GoogleService-Info.plist */; };
@@ -61,6 +63,8 @@
 		3F817F511EEC1C02004A9865 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		3F817F531EEC1C0C004A9865 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F817F551EEC1CA7004A9865 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		3F817F581EEC3952004A9865 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		3F817F5A1EEC3AE9004A9865 /* BaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		3F93D8661EEAF12F007AA6D9 /* testInstantgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testInstantgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87A1EEAF12F007AA6D9 /* testInstantgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testInstantgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testInstantgoTests.swift; sourceTree = "<group>"; };
@@ -151,6 +155,14 @@
 			path = es.lproj;
 			sourceTree = "<group>";
 		};
+		3F817F571EEC391A004A9865 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3F817F581EEC3952004A9865 /* AlertFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		3F93D85D1EEAF12F007AA6D9 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +217,7 @@
 		3F93D89B1EEAFA0C007AA6D9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3F817F571EEC391A004A9865 /* Factory */,
 				3F93D89C1EEAFA0C007AA6D9 /* Base */,
 				3F93D89D1EEAFA0C007AA6D9 /* Tools */,
 			);
@@ -214,6 +227,7 @@
 		3F93D89C1EEAFA0C007AA6D9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3F817F5A1EEC3AE9004A9865 /* BaseError.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -472,7 +486,9 @@
 				3F817F501EEB0CAC004A9865 /* String+Util.swift in Sources */,
 				3F817F541EEC1C0C004A9865 /* Constants.swift in Sources */,
 				3F817F521EEC1C02004A9865 /* Enviroment.swift in Sources */,
+				3F817F5B1EEC3AE9004A9865 /* BaseError.swift in Sources */,
 				3F93D8AC1EEAFA0C007AA6D9 /* AppDelegate.swift in Sources */,
+				3F817F591EEC3952004A9865 /* AlertFactory.swift in Sources */,
 				3F817F3D1EEB05A9004A9865 /* LoginInteractor.swift in Sources */,
 				3F817F3C1EEB05A9004A9865 /* LoginDataManager.swift in Sources */,
 			);
