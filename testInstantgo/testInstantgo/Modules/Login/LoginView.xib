@@ -31,19 +31,19 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-oD-Z2f">
-                    <rect key="frame" x="16" y="79" width="343" height="30"/>
+                    <rect key="frame" x="16" y="80" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpN-Im-2Ab">
-                    <rect key="frame" x="16" y="142" width="343" height="30"/>
+                    <rect key="frame" x="16" y="143" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-f0-hop">
-                    <rect key="frame" x="164" y="277" width="46" height="30"/>
+                    <rect key="frame" x="164" y="278" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="tapLogin:" destination="-1" eventType="touchUpInside" id="s1f-RG-l7B"/>
@@ -59,7 +59,7 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b3Z-f0-hop" secondAttribute="trailing" constant="16" id="Kwe-xQ-oBL"/>
                 <constraint firstItem="r3w-QE-WZg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9JP-JY-ND5" secondAttribute="leading" constant="16" id="OGV-xc-wlo"/>
                 <constraint firstItem="bpN-Im-2Ab" firstAttribute="leading" secondItem="fWc-oD-Z2f" secondAttribute="leading" id="PdM-lW-JVh"/>
-                <constraint firstItem="fWc-oD-Z2f" firstAttribute="top" secondItem="9JP-JY-ND5" secondAttribute="top" constant="79" id="Rgj-AW-FQq"/>
+                <constraint firstItem="fWc-oD-Z2f" firstAttribute="top" secondItem="9JP-JY-ND5" secondAttribute="top" constant="80" id="Rgj-AW-FQq"/>
                 <constraint firstItem="b3Z-f0-hop" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9JP-JY-ND5" secondAttribute="leading" constant="16" id="YAu-5l-pnO"/>
                 <constraint firstItem="bpN-Im-2Ab" firstAttribute="trailing" secondItem="fWc-oD-Z2f" secondAttribute="trailing" id="Z61-ni-cWc"/>
                 <constraint firstAttribute="trailing" secondItem="fWc-oD-Z2f" secondAttribute="trailing" constant="16" id="jRW-xs-fkU"/>

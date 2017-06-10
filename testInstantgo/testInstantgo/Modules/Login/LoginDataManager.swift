@@ -20,7 +20,7 @@ class LoginDataManager: LoginDataManagerProtocol {
     
     // MARK: - Properties
     
-    private var apiClient: LoginAPIClientProtocol?
+    private var apiClient: LoginAPIClientProtocol
     
     
     // MARK: - Object lifecycle
@@ -35,7 +35,7 @@ class LoginDataManager: LoginDataManagerProtocol {
     
     func login(user: String, password: String, success: @escaping (Void) -> Void, failure: @escaping (BaseError) -> Void) {
         
-        self.apiClient?.login(user: user, password: password, success: success, failure: failure)
+        self.apiClient.login(user: user, password: password, success: success, failure: failure)
     }
 }
 

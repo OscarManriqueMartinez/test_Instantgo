@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="testInstantgo" customModuleProvider="target">
+            <connections>
+                <outlet property="btnRegister" destination="N5E-fV-p8R" id="cLU-uY-qF9"/>
+                <outlet property="txfRegisterPass" destination="CcY-M9-lI3" id="yDA-XO-8Rh"/>
+                <outlet property="txfRegisterRepeatPass" destination="NJW-eO-YCF" id="WMx-o9-v6m"/>
+                <outlet property="txfRegisterUser" destination="EZ1-R6-tNW" id="1H4-9f-SCf"/>
+                <outlet property="view" destination="9JP-JY-ND5" id="eYh-J8-L7I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9JP-JY-ND5">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZ1-R6-tNW">
+                    <rect key="frame" x="16" y="80" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-eO-YCF">
+                    <rect key="frame" x="16" y="206" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5E-fV-p8R">
+                    <rect key="frame" x="164" y="278" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="tapRegister:" destination="-1" eventType="touchUpInside" id="t07-Jh-Upe"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-M9-lI3">
+                    <rect key="frame" x="16" y="143" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CcY-M9-lI3" firstAttribute="trailing" secondItem="EZ1-R6-tNW" secondAttribute="trailing" id="0PN-MR-6f4"/>
+                <constraint firstItem="N5E-fV-p8R" firstAttribute="top" secondItem="NJW-eO-YCF" secondAttribute="bottom" constant="42" id="4H0-yq-PGS"/>
+                <constraint firstItem="NJW-eO-YCF" firstAttribute="top" secondItem="CcY-M9-lI3" secondAttribute="bottom" constant="33" id="BYJ-ci-cZD"/>
+                <constraint firstItem="EZ1-R6-tNW" firstAttribute="top" secondItem="9JP-JY-ND5" secondAttribute="top" constant="80" id="GdK-tM-riD"/>
+                <constraint firstAttribute="trailing" secondItem="EZ1-R6-tNW" secondAttribute="trailing" constant="16" id="IUe-73-JRo"/>
+                <constraint firstItem="NJW-eO-YCF" firstAttribute="leading" secondItem="EZ1-R6-tNW" secondAttribute="leading" id="SXf-3n-3fG"/>
+                <constraint firstItem="CcY-M9-lI3" firstAttribute="leading" secondItem="EZ1-R6-tNW" secondAttribute="leading" id="YeR-Ai-Oc7"/>
+                <constraint firstItem="NJW-eO-YCF" firstAttribute="trailing" secondItem="EZ1-R6-tNW" secondAttribute="trailing" id="fP5-uH-7gv"/>
+                <constraint firstItem="EZ1-R6-tNW" firstAttribute="leading" secondItem="9JP-JY-ND5" secondAttribute="leading" constant="16" id="kSv-Ub-zOU"/>
+                <constraint firstItem="CcY-M9-lI3" firstAttribute="top" secondItem="EZ1-R6-tNW" secondAttribute="bottom" constant="33" id="mgU-Hq-OZr"/>
+                <constraint firstItem="N5E-fV-p8R" firstAttribute="centerX" secondItem="9JP-JY-ND5" secondAttribute="centerX" id="p52-Tt-PDd"/>
+            </constraints>
+            <point key="canvasLocation" x="310" y="-626"/>
+        </view>
+    </objects>
+</document>

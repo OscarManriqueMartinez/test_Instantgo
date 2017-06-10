@@ -23,6 +23,16 @@
 		3F817F561EEC1CA7004A9865 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F817F551EEC1CA7004A9865 /* Config.plist */; };
 		3F817F591EEC3952004A9865 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F581EEC3952004A9865 /* AlertFactory.swift */; };
 		3F817F5B1EEC3AE9004A9865 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F5A1EEC3AE9004A9865 /* BaseError.swift */; };
+		3F817F641EEC4770004A9865 /* RegisterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F5D1EEC4770004A9865 /* RegisterAPIClient.swift */; };
+		3F817F651EEC4770004A9865 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F5E1EEC4770004A9865 /* RegisterDataManager.swift */; };
+		3F817F661EEC4770004A9865 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F5F1EEC4770004A9865 /* RegisterInteractor.swift */; };
+		3F817F671EEC4770004A9865 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F601EEC4770004A9865 /* RegisterPresenter.swift */; };
+		3F817F6A1EEC4770004A9865 /* RegisterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F631EEC4770004A9865 /* RegisterWireframe.swift */; };
+		3F817F6E1EEC478C004A9865 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F817F6C1EEC478C004A9865 /* RegisterView.xib */; };
+		3F817F6F1EEC478C004A9865 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F6D1EEC478C004A9865 /* RegisterViewController.swift */; };
+		3F817F711EEC4D22004A9865 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F701EEC4D22004A9865 /* BasePresenter.swift */; };
+		3F817F731EEC4D5E004A9865 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F721EEC4D5E004A9865 /* BaseViewController.swift */; };
+		3F817F751EEC6BDA004A9865 /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */; };
 		3F93D87F1EEAF12F007AA6D9 /* testInstantgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */; };
 		3F93D88A1EEAF12F007AA6D9 /* testInstantgoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93D8891EEAF12F007AA6D9 /* testInstantgoUITests.swift */; };
 		3F93D8AA1EEAFA0C007AA6D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F93D89F1EEAFA0C007AA6D9 /* GoogleService-Info.plist */; };
@@ -65,6 +75,16 @@
 		3F817F551EEC1CA7004A9865 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		3F817F581EEC3952004A9865 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		3F817F5A1EEC3AE9004A9865 /* BaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		3F817F5D1EEC4770004A9865 /* RegisterAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAPIClient.swift; sourceTree = "<group>"; };
+		3F817F5E1EEC4770004A9865 /* RegisterDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		3F817F5F1EEC4770004A9865 /* RegisterInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		3F817F601EEC4770004A9865 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		3F817F631EEC4770004A9865 /* RegisterWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWireframe.swift; sourceTree = "<group>"; };
+		3F817F6C1EEC478C004A9865 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		3F817F6D1EEC478C004A9865 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F817F701EEC4D22004A9865 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		3F817F721EEC4D5E004A9865 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		3F93D8661EEAF12F007AA6D9 /* testInstantgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testInstantgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87A1EEAF12F007AA6D9 /* testInstantgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testInstantgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93D87E1EEAF12F007AA6D9 /* testInstantgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testInstantgoTests.swift; sourceTree = "<group>"; };
@@ -163,6 +183,28 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		3F817F5C1EEC4723004A9865 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F817F5D1EEC4770004A9865 /* RegisterAPIClient.swift */,
+				3F817F5E1EEC4770004A9865 /* RegisterDataManager.swift */,
+				3F817F5F1EEC4770004A9865 /* RegisterInteractor.swift */,
+				3F817F601EEC4770004A9865 /* RegisterPresenter.swift */,
+				3F817F631EEC4770004A9865 /* RegisterWireframe.swift */,
+				3F817F6B1EEC478C004A9865 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3F817F6B1EEC478C004A9865 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F817F6C1EEC478C004A9865 /* RegisterView.xib */,
+				3F817F6D1EEC478C004A9865 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3F93D85D1EEAF12F007AA6D9 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				3F817F5A1EEC3AE9004A9865 /* BaseError.swift */,
+				3F817F701EEC4D22004A9865 /* BasePresenter.swift */,
+				3F817F721EEC4D5E004A9865 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -235,6 +279,7 @@
 		3F93D89D1EEAFA0C007AA6D9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3F817F741EEC6BDA004A9865 /* UIViewController+Util.swift */,
 				3F817F4F1EEB0CAC004A9865 /* String+Util.swift */,
 			);
 			path = Tools;
@@ -256,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				3F817F331EEB05A9004A9865 /* Login */,
+				3F817F5C1EEC4723004A9865 /* Register */,
 				3F93D8A21EEAFA0C007AA6D9 /* AppDelegate.swift */,
 			);
 			path = Modules;
@@ -403,6 +449,7 @@
 				3F817F3F1EEB05A9004A9865 /* LoginView.xib in Resources */,
 				3F817F4A1EEB0B22004A9865 /* Localizable.strings in Resources */,
 				3F817F4E1EEB0B55004A9865 /* Localizable.strings in Resources */,
+				3F817F6E1EEC478C004A9865 /* RegisterView.xib in Resources */,
 				3F817F561EEC1CA7004A9865 /* Config.plist in Resources */,
 				3F93D8AF1EEAFA0C007AA6D9 /* LaunchScreen.storyboard in Resources */,
 				3F93D8AE1EEAFA0C007AA6D9 /* Assets.xcassets in Resources */,
@@ -479,18 +526,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F817F751EEC6BDA004A9865 /* UIViewController+Util.swift in Sources */,
 				3F817F401EEB05A9004A9865 /* LoginViewController.swift in Sources */,
 				3F817F3E1EEB05A9004A9865 /* LoginPresenter.swift in Sources */,
 				3F817F411EEB05A9004A9865 /* LoginWireframe.swift in Sources */,
 				3F817F3B1EEB05A9004A9865 /* LoginAPIClient.swift in Sources */,
+				3F817F651EEC4770004A9865 /* RegisterDataManager.swift in Sources */,
+				3F817F731EEC4D5E004A9865 /* BaseViewController.swift in Sources */,
 				3F817F501EEB0CAC004A9865 /* String+Util.swift in Sources */,
+				3F817F661EEC4770004A9865 /* RegisterInteractor.swift in Sources */,
+				3F817F6A1EEC4770004A9865 /* RegisterWireframe.swift in Sources */,
 				3F817F541EEC1C0C004A9865 /* Constants.swift in Sources */,
+				3F817F711EEC4D22004A9865 /* BasePresenter.swift in Sources */,
+				3F817F6F1EEC478C004A9865 /* RegisterViewController.swift in Sources */,
 				3F817F521EEC1C02004A9865 /* Enviroment.swift in Sources */,
 				3F817F5B1EEC3AE9004A9865 /* BaseError.swift in Sources */,
 				3F93D8AC1EEAFA0C007AA6D9 /* AppDelegate.swift in Sources */,
 				3F817F591EEC3952004A9865 /* AlertFactory.swift in Sources */,
 				3F817F3D1EEB05A9004A9865 /* LoginInteractor.swift in Sources */,
+				3F817F641EEC4770004A9865 /* RegisterAPIClient.swift in Sources */,
 				3F817F3C1EEB05A9004A9865 /* LoginDataManager.swift in Sources */,
+				3F817F671EEC4770004A9865 /* RegisterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

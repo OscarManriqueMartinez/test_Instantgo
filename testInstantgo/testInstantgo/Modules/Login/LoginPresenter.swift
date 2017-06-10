@@ -14,37 +14,37 @@ protocol LoginPresenterProtocol: class {
      */
     
     func doLogin(user: String, password: String)
+    
+    func goToRegister()
 }
 
-protocol LoginInteractorOutputProtocol: class {
+protocol LoginInteractorOutputProtocol: class, BaseInteractorOutputProtocol {
     
     /**
      * Add here your methods for communication INTERACTOR -> PRESENTER
      */
-    
-    func show(error: BaseError)
-    
+        
     func goToCalendar()
 }
 
 
-class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
+class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutputProtocol {
     
     // MARK: Properties
     
     private weak var view: LoginViewControllerProtocol?
-    private var interactor: LoginInteractorInputProtocol?
-    
-//    Wireframe of the next view
-//    private var wireframe: NextViewWireframeProtocol?
+    private var interactor: LoginInteractorInputProtocol
+    private var registerWireframe: RegisterWireframeProtocol
     
     
     // MARK: - Object lifecycle
     
-    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol) {
+    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol, registerWireframe: RegisterWireframeProtocol) {
         
         self.view = view
         self.interactor = interactor
+        self.registerWireframe = registerWireframe
+        super.init(baseView: view)
     }
     
     
@@ -52,16 +52,16 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
     
     func doLogin(user: String, password: String) {
         
-        interactor?.doLogin(user: user, password: password)
+        interactor.doLogin(user: user, password: password)
+    }
+    
+    func goToRegister() {
+    
+        registerWireframe.present()
     }
     
     
     // MARK: LoginInteractorOutputProtocol
-    
-    func show(error: BaseError) {
-        
-        view?.show(error: error.description())
-    }
 
     func goToCalendar() {
         
