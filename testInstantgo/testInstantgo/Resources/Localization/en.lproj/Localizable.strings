@@ -6,7 +6,14 @@
   Copyright © 2017 Óscar Manrique. All rights reserved.
 */
 
-"login.email.placeholder" = "email";
-"login.password.placeholder" = "password";
-"login.login.button" = "Login";
-"login.register.button" = "Register";
+"email.placeholder" = "Email";
+"password.placeholder" = "Contraseña";
+"password.repeat.placeholder" = "Repetir contraseña";
+"login.button" = "Acceder";
+"register.button" = "Registrarme";
+
+"error" = "Error";
+"error.valid.email" = "Formato del email no válido";
+"error.valid.pass" = "Formato de la contraseña no válida";
+"error.login" = "Email o contraseña incorrecta";
+"error.generic" = "Se ha producido un error, intentelo más tarde";

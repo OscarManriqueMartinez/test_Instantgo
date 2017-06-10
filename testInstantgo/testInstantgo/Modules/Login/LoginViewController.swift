@@ -10,7 +10,7 @@
 import UIKit
 
 
-protocol LoginViewControllerProtocol: class {
+protocol LoginViewControllerProtocol: class, BaseViewControllerProtocol {
     
     /**
      * Add here your methods for communication PRESENTER -> VIEW
@@ -18,11 +18,10 @@ protocol LoginViewControllerProtocol: class {
     
     func set(presenter: LoginPresenterProtocol)
     
-    func show(error: String)
 }
 
 
-class LoginViewController: UIViewController, LoginViewControllerProtocol {
+class LoginViewController: BaseViewController, LoginViewControllerProtocol {
   
     // MARK: - Properties
     
@@ -39,10 +38,10 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        txfLoginUser.placeholder = "login.email.placeholder".localized
-        txfLoginPass.placeholder = "login.password.placeholder".localized
-        btnLogin.setTitle("login.login.button".localized, for: .normal)
-        btnRegister.setTitle("login.register.button".localized, for: .normal)
+        txfLoginUser.placeholder = "email.placeholder".localized
+        txfLoginPass.placeholder = "password.placeholder".localized
+        btnLogin.setTitle("login.button".localized, for: .normal)
+        btnRegister.setTitle("register.button".localized, for: .normal)
     }
     
     
@@ -51,11 +50,6 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     func set(presenter: LoginPresenterProtocol) {
         
         self.presenter = presenter
-    }
-    
-    func show(error: String) {
-        
-        self.present(AlertFactory.alert(error: error), animated: true, completion: nil)
     }
     
     

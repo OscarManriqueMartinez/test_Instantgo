@@ -16,19 +16,17 @@ protocol LoginPresenterProtocol: class {
     func doLogin(user: String, password: String)
 }
 
-protocol LoginInteractorOutputProtocol: class {
+protocol LoginInteractorOutputProtocol: class, BaseInteractorOutputProtocol {
     
     /**
      * Add here your methods for communication INTERACTOR -> PRESENTER
      */
-    
-    func show(error: BaseError)
-    
+        
     func goToCalendar()
 }
 
 
-class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
+class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutputProtocol {
     
     // MARK: Properties
     
@@ -43,6 +41,7 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
     
     init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol) {
         
+        super.init(baseView: view)
         self.view = view
         self.interactor = interactor
     }
@@ -57,11 +56,6 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
     
     
     // MARK: LoginInteractorOutputProtocol
-    
-    func show(error: BaseError) {
-        
-        view?.show(error: error.description())
-    }
 
     func goToCalendar() {
         
