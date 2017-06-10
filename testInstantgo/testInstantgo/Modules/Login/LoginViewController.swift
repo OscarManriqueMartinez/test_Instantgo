@@ -61,6 +61,8 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
             return
         }
         
+        showLoading()
+        
         presenter?.doLogin(user: user, password: pass)
     }
     

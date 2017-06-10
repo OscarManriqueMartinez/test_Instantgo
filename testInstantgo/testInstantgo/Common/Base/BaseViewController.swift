@@ -10,19 +10,47 @@ import Foundation
 import UIKit
 
 protocol BaseViewControllerProtocol  {
-//    var loadingView: LoadingView{get set}
+    
     func show(error: String)
-//    func dismissController()
-//    func popToRootViewController()
+
+    func showLoading()
+    
+    func hideLoading()
 }
 
 class BaseViewController: UIViewController {
 
-
+    // MARK: - Properties
+    
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    
+    // MARK: - Object lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // set up activity indicator
+        activityIndicator.center = self.view.center
+        activityIndicator.color = UIColor.blue
+        self.view.addSubview(activityIndicator)
+    }
+    
+    
     // MARK: - BaseViewControllerProtocol
     
     func show(error: String){
         
+        hideLoading()
         self.present(AlertFactory.alert(error: error), animated: true, completion: nil)
+    }
+    
+    func showLoading() {
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func hideLoading(){
+        
+        activityIndicator.stopAnimating()
     }
 }

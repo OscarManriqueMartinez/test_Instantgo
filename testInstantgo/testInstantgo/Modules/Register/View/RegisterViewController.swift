@@ -59,6 +59,7 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
     
     func showRegisterSuccess() {
         
+        hideLoading()
         self.present(AlertFactory.alertRegister(action: {self.close()}), animated: true, completion: nil)
     }
     
@@ -71,6 +72,7 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
             return
         }
         
+        showLoading()
         presenter?.doRegister(user: user, password: pass, repeatPass: repeatPass)
     }
     
