@@ -12,7 +12,8 @@ protocol LoginDataManagerProtocol: class {
     /**
      * Add here your methods for communication INTERACTOR -> DATA_MANAGER
      */
-}
+    
+    func login(user: String, password: String, success: @escaping (Void) -> Void, failure: @escaping (BaseError) -> Void)}
 
 
 class LoginDataManager: LoginDataManagerProtocol {
@@ -31,6 +32,11 @@ class LoginDataManager: LoginDataManagerProtocol {
     
     
     // MARK: - LoginDataManagerProtocol
+    
+    func login(user: String, password: String, success: @escaping (Void) -> Void, failure: @escaping (BaseError) -> Void) {
+        
+        self.apiClient?.login(user: user, password: password, success: success, failure: failure)
+    }
 }
 
 

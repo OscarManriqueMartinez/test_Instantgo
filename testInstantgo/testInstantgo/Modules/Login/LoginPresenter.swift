@@ -23,6 +23,8 @@ protocol LoginInteractorOutputProtocol: class {
      */
     
     func show(error: BaseError)
+    
+    func goToCalendar()
 }
 
 
@@ -59,5 +61,9 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
     func show(error: BaseError) {
         
         view?.show(error: error.description())
+    }
+
+    func goToCalendar() {
+        
     }
 }

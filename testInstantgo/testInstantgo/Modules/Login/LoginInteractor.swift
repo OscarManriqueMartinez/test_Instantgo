@@ -52,6 +52,11 @@ class LoginInteractor: LoginInteractorInputProtocol {
             presenter?.show(error: BaseError.invalidEmail)
         }
         
-        
+        dataManager?.login(user: user, password: password, success: {
+            
+            
+        }, failure: { error in
+            self.presenter?.show(error: error)
+        })
     }
 }
