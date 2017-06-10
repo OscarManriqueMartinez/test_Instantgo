@@ -66,6 +66,7 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol {
     
     @IBAction private func tapRegister(_ sender: Any) {
         
+        presenter?.goToRegister()
     }
     
 }

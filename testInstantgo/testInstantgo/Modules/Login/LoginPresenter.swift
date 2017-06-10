@@ -14,6 +14,8 @@ protocol LoginPresenterProtocol: class {
      */
     
     func doLogin(user: String, password: String)
+    
+    func goToRegister()
 }
 
 protocol LoginInteractorOutputProtocol: class, BaseInteractorOutputProtocol {
@@ -31,19 +33,18 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutp
     // MARK: Properties
     
     private weak var view: LoginViewControllerProtocol?
-    private var interactor: LoginInteractorInputProtocol?
-    
-//    Wireframe of the next view
-//    private var wireframe: NextViewWireframeProtocol?
+    private var interactor: LoginInteractorInputProtocol
+    private var registerWireframe: RegisterWireframeProtocol
     
     
     // MARK: - Object lifecycle
     
-    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol) {
+    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol, registerWireframe: RegisterWireframeProtocol) {
         
-        super.init(baseView: view)
         self.view = view
         self.interactor = interactor
+        self.registerWireframe = registerWireframe
+        super.init(baseView: view)
     }
     
     
@@ -51,7 +52,12 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutp
     
     func doLogin(user: String, password: String) {
         
-        interactor?.doLogin(user: user, password: password)
+        interactor.doLogin(user: user, password: password)
+    }
+    
+    func goToRegister() {
+    
+        registerWireframe.present()
     }
     
     
