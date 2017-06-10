@@ -12,6 +12,8 @@ protocol RegisterDataManagerProtocol: class {
     /**
      * Add here your methods for communication INTERACTOR -> DATA_MANAGER
      */
+    
+    func register(user: String, password: String, success: @escaping (Void) -> Void, failure: @escaping (BaseError) -> Void)
 }
 
 
@@ -19,7 +21,7 @@ class RegisterDataManager: RegisterDataManagerProtocol {
     
     // MARK: - Properties
     
-    private var apiClient: RegisterAPIClientProtocol?
+    private var apiClient: RegisterAPIClientProtocol
     
     
     // MARK: - Object lifecycle
@@ -31,6 +33,11 @@ class RegisterDataManager: RegisterDataManagerProtocol {
     
     
     // MARK: - RegisterDataManagerProtocol
+    
+    func register(user: String, password: String, success: @escaping (Void) -> Void, failure: @escaping (BaseError) -> Void) {
+     
+        apiClient.register(user: user, password: password, success: success, failure: failure)
+    }
 }
 
 

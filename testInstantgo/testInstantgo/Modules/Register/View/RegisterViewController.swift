@@ -17,6 +17,10 @@ protocol RegisterViewControllerProtocol: class, BaseViewControllerProtocol {
      */
     
     func set(presenter: RegisterPresenterProtocol)
+    
+    func close()
+    
+    func showRegisterSuccess()
 }
 
 
@@ -41,6 +45,8 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
         txfRegisterPass.placeholder = "password.placeholder".localized
         txfRegisterRepeatPass.placeholder = "password.repeat.placeholder".localized
         btnRegister.setTitle("register.button".localized, for: .normal)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
     }
     
     
@@ -49,6 +55,11 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
     func set(presenter: RegisterPresenterProtocol) {
         
         self.presenter = presenter
+    }
+    
+    func showRegisterSuccess() {
+        
+        self.present(AlertFactory.alertRegister(action: {self.close()}), animated: true, completion: nil)
     }
     
     
@@ -61,5 +72,10 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
         }
         
         presenter?.doRegister(user: user, password: pass, repeatPass: repeatPass)
+    }
+    
+    func close() {
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }

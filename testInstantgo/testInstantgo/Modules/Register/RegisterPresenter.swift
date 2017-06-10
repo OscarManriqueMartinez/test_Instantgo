@@ -21,6 +21,9 @@ protocol RegisterInteractorOutputProtocol: class, BaseInteractorOutputProtocol {
     /**
      * Add here your methods for communication INTERACTOR -> PRESENTER
      */
+    
+    func showRegisterSuccess()
+    
 }
 
 
@@ -29,30 +32,31 @@ class RegisterPresenter: BasePresenter, RegisterPresenterProtocol, RegisterInter
     // MARK: Properties
     
     private weak var view: RegisterViewControllerProtocol?
-    private var interactor: RegisterInteractorInputProtocol?
-    
-//    Wireframe of the next view
-//    private var wireframe: NextViewWireframeProtocol?
+    private var interactor: RegisterInteractorInputProtocol
     
     
     // MARK: - Object lifecycle
     
     init(view: RegisterViewControllerProtocol, interactor: RegisterInteractorInputProtocol) {
         
-        super.init(baseView: view)
         self.view = view
         self.interactor = interactor
+        super.init(baseView: view)
     }
     
     
-    // MARK: RegisterPresenterProtocol
+    // MARK: - RegisterPresenterProtocol
     
     func doRegister(user: String, password: String, repeatPass: String) {
     
+        interactor.doRegister(user: user, password: password, repeatPass: repeatPass)
     }
     
     
-    // MARK: RegisterInteractorOutputProtocol
+    // MARK: - RegisterInteractorOutputProtocol
     
-    
+    func showRegisterSuccess() {
+        
+        view?.showRegisterSuccess()
+    }
 }

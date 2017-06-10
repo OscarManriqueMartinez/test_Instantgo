@@ -24,7 +24,7 @@ class LoginInteractor: LoginInteractorInputProtocol {
     // MARK: Properties
     
     private weak var presenter: LoginInteractorOutputProtocol?
-    private var dataManager: LoginDataManagerProtocol?
+    private var dataManager: LoginDataManagerProtocol
     
     
     // MARK: - Object lifecycle
@@ -44,15 +44,22 @@ class LoginInteractor: LoginInteractorInputProtocol {
     
     func doLogin(user: String, password: String) {
         
-        if !user.isValidEmail() {
-            presenter?.show(error: BaseError.invalidEmail)
+        if user == "" || password == "" {
+            presenter?.show(error: BaseError.empty)
+            return
         }
         
         if !user.isValidEmail() {
             presenter?.show(error: BaseError.invalidEmail)
+            return
         }
         
-        dataManager?.login(user: user, password: password, success: {
+        if !password.isValidPassword() {
+            presenter?.show(error: BaseError.invalidPass)
+            return
+        }
+        
+        dataManager.login(user: user, password: password, success: {
             
             
         }, failure: { error in

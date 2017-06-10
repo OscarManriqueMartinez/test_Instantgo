@@ -63,7 +63,8 @@ class RegisterWireframe: RegisterWireframeProtocol {
         let window = appDelegate.window
         let nav : UINavigationController = window!.rootViewController as! UINavigationController
         
-        nav.present(viewController, animated: true)
+        let navController = UINavigationController(rootViewController: viewController)
+        nav.present(navController, animated: true)
     }
 }
 

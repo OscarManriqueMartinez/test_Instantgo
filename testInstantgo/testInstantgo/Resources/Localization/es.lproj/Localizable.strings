@@ -14,8 +14,13 @@
 
 "error" = "Error";
 "error.valid.email" = "Formato del email no válido";
-"error.valid.pass" = "Formato de la contraseña no válida";
+"error.valid.pass" = "Formato de la contraseña no válida. Tiene que tener al menos 6 caracteres";
 "error.login" = "Email o contraseña incorrecta";
 "error.generic" = "Se ha producido un error, intentelo más tarde";
+"error.diferent.pass" = "Las contraseñas son diferentes";
+"error.field.empty" = "Se tienen que rellenar todos los campos";
+
+"register" = "Registro";
+"register.description" = "Se ha realizado correctamente";
 
 "ok" = "Ok";
