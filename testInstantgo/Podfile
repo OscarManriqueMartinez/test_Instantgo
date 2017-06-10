@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'testInstantgo' do
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
 end
 

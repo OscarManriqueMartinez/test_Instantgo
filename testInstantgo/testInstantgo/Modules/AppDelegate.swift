@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        let nav = UINavigationController()
+        nav.viewControllers = [LoginWireframe().viewController]
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+    
         return true
     }
 

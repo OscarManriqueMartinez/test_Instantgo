@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  testInstantgo
+
+  Created by Óscar Manrique on 9/6/17.
+  Copyright © 2017 Óscar Manrique. All rights reserved.
+*/
+
+"login.email.placeholder" = "email";
+"login.password.placeholder" = "password";
+"login.login.button" = "Login";
+"login.register.button" = "Register";
