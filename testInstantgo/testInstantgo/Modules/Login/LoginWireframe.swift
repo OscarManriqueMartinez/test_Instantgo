@@ -29,7 +29,7 @@ class LoginWireframe: LoginWireframeProtocol {
         // Generating module components
         let viewController: LoginViewController = LoginViewController(nibName: "LoginView", bundle: nil)
         let interactor: LoginInteractor = createInteractor(with: dataManager)
-        let presenter: LoginPresenter = createPresenter(with: viewController, interactor: interactor, registerWireframe: registerWireframe)
+        let presenter: LoginPresenter = createPresenter(with: viewController, interactor: interactor, registerWireframe: registerWireframe, eventListWireframe: eventListWireframe)
         viewController.set(presenter: presenter)
         interactor.set(presenter: presenter)
         return viewController
@@ -47,6 +47,10 @@ class LoginWireframe: LoginWireframeProtocol {
         return RegisterWireframe()
     }
     
+    private var eventListWireframe: EventListWireframeProtocol{
+        return EventListWireframe()
+    }
+    
     
     // MARK: - Private methods
     
@@ -54,8 +58,8 @@ class LoginWireframe: LoginWireframeProtocol {
         return LoginInteractor(dataManager: dataManager)
     }
     
-    private func createPresenter(with view: LoginViewController, interactor: LoginInteractor, registerWireframe: RegisterWireframeProtocol) -> LoginPresenter {
-        return LoginPresenter(view: view, interactor: interactor, registerWireframe: registerWireframe)
+    private func createPresenter(with view: LoginViewController, interactor: LoginInteractor, registerWireframe: RegisterWireframeProtocol, eventListWireframe: EventListWireframeProtocol) -> LoginPresenter {
+        return LoginPresenter(view: view, interactor: interactor, registerWireframe: registerWireframe, eventListWireframe: eventListWireframe)
     }    
     
     

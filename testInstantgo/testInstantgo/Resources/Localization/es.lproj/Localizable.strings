@@ -24,3 +24,11 @@
 "register.description" = "Se ha realizado correctamente";
 
 "ok" = "Ok";
+
+"warning" = "Atención";
+"alert.open.setings" = "Para poder visualizar los eventos de si calendario debe aceptar los permisos";
+
+"event.title" = "Título";
+"event.start.date" = "Fecha comienzo";
+"event.end.date" = "Fecha fin";
+"event.organizer" = "Organizador";

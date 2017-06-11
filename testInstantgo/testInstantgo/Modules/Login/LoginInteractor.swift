@@ -60,7 +60,7 @@ class LoginInteractor: LoginInteractorInputProtocol {
         }
         
         dataManager.login(user: user, password: password, success: {
-            
+            self.presenter?.goToCalendar()
             
         }, failure: { error in
             self.presenter?.show(error: error)

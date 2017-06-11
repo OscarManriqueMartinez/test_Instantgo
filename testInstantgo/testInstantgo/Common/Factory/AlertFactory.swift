@@ -30,4 +30,15 @@ class AlertFactory {
         
         return alert
     }
+    
+    static func alertOpenSettings(action:@escaping (Void) -> Void) -> UIAlertController {
+        
+        let alert: UIAlertController = UIAlertController(title: "warning".localized, message: "alert.open.setings".localized, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "ok".localized, style: UIAlertActionStyle.cancel, handler: { event in
+            action()
+        }))
+        
+        return alert
+    }
 }

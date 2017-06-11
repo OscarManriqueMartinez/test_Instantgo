@@ -15,5 +15,13 @@ struct Constants {
     static let nameFileEnviroment = "Config"
     static let typeFileEnviroment = "plist"
     static let keyLengthPassword = "lengthPassword"
+    
+    // MARK: - Time
+    
+    static let dayInSeconds = 86400.0
+    static let maxRetryTime = 12
+    
+    static let eventCellReuseIdentifier = "EventCell"
+    static let eventCellNibName = "EventCell"
 }
 
