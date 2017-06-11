@@ -45,6 +45,8 @@ class EventListViewController: BaseViewController, EventListViewControllerProtoc
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.title = "events".localized
     }
     
     override func viewWillAppear(_ animated: Bool) {

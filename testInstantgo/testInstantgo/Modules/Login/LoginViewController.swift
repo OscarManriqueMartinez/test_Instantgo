@@ -44,6 +44,8 @@ class LoginViewController: BaseViewController, LoginViewControllerProtocol, UITe
         txfLoginPass.delegate = self
         btnLogin.setTitle("login.button".localized, for: .normal)
         btnRegister.setTitle("register.button".localized, for: .normal)
+        
+        self.title = "login".localized
     }
     
     
