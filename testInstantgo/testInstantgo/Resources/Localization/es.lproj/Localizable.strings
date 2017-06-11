@@ -6,6 +6,7 @@
   Copyright © 2017 Óscar Manrique. All rights reserved.
 */
 
+"login" = "Inicio";
 "email.placeholder" = "Email";
 "password.placeholder" = "Contraseña";
 "password.repeat.placeholder" = "Repetir contraseña";
@@ -24,3 +25,12 @@
 "register.description" = "Se ha realizado correctamente";
 
 "ok" = "Ok";
+
+"warning" = "Atención";
+"alert.open.setings" = "Para poder visualizar los eventos de si calendario debe aceptar los permisos";
+
+"events" = "Eventos";
+"event.title" = "Título";
+"event.start.date" = "Fecha comienzo";
+"event.end.date" = "Fecha fin";
+"event.organizer" = "Organizador";

@@ -35,15 +35,17 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutp
     private weak var view: LoginViewControllerProtocol?
     private var interactor: LoginInteractorInputProtocol
     private var registerWireframe: RegisterWireframeProtocol
+    private var eventListWireframe: EventListWireframeProtocol
     
     
     // MARK: - Object lifecycle
     
-    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol, registerWireframe: RegisterWireframeProtocol) {
+    init(view: LoginViewControllerProtocol, interactor: LoginInteractorInputProtocol, registerWireframe: RegisterWireframeProtocol, eventListWireframe: EventListWireframeProtocol) {
         
         self.view = view
         self.interactor = interactor
         self.registerWireframe = registerWireframe
+        self.eventListWireframe = eventListWireframe
         super.init(baseView: view)
     }
     
@@ -65,5 +67,6 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol, LoginInteractorOutp
 
     func goToCalendar() {
         
+        eventListWireframe.present()
     }
 }

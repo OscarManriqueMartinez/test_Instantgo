@@ -50,6 +50,8 @@ class RegisterViewController: BaseViewController, RegisterViewControllerProtocol
         btnRegister.setTitle("register.button".localized, for: .normal)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
+        
+        self.title = "register".localized
     }
     
     
